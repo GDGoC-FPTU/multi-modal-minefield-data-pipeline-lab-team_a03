@@ -1,0 +1,548 @@
+[
+    {
+        "document_id": "transcript_001",
+        "content": "Transcript Content:\n: Chào mừng các bạn đến với buổi học hôm nay về Data Pipeline Engineering.\n : Hôm nay chúng ta sẽ nói về việc xử lý dữ liệu phi cấu trúc, ví dụ như PDF và Video.\n : Một vấn đề lớn là Semantic Drift. Các bạn có biết không?\n : Dạ em có nghe qua, nhưng  nó có liên quan gì đến Zillow không ạ?\n : Có chứ! Zillow là ví dụ điển hình của việc mô hình bị hỏng do dữ liệu đầu vào thay đổi.\n :  Đừng để mô hình của bạn trở thành 'rác vào, rác ra'.\n : À, một lưu ý nhỏ cho bài tập: Giá của sản phẩm VinAI Pro là năm trăm nghìn VND. Nhớ nhé, 500,000 VND.\n : \n : Bây giờ chúng ta hãy bắt đầu thực hành.\n\nPrice Extracted: năm trăm nghìn",
+        "source_type": "Transcript",
+        "author": "System",
+        "timestamp": null,
+        "source_metadata": {
+            "speakers": [
+                "Speaker 1",
+                "Speaker 2"
+            ],
+            "duration": "Unknown"
+        }
+    },
+    {
+        "document_id": "html_catalog_SP-001",
+        "content": "Product: VinAI Laptop Pro 14\", Category: Laptop, Price: 28,500,000 VND",
+        "source_type": "HTML",
+        "author": "System",
+        "timestamp": null,
+        "source_metadata": {
+            "url": "D:\\AI_thuc_chien\\On_class\\Day_lab_17\\multi-modal-minefield-data-pipeline-lab-team_a03\\raw_data\\product_catalog.html",
+            "node_count": 69
+        }
+    },
+    {
+        "document_id": "html_catalog_SP-002",
+        "content": "Product: Chuột không dây ErgoMax, Category: Phụ kiện, Price: None",
+        "source_type": "HTML",
+        "author": "System",
+        "timestamp": null,
+        "source_metadata": {
+            "url": "D:\\AI_thuc_chien\\On_class\\Day_lab_17\\multi-modal-minefield-data-pipeline-lab-team_a03\\raw_data\\product_catalog.html",
+            "node_count": 69
+        }
+    },
+    {
+        "document_id": "html_catalog_SP-003",
+        "content": "Product: Màn hình 4K 27\" ProDisplay, Category: Màn hình, Price: None",
+        "source_type": "HTML",
+        "author": "System",
+        "timestamp": null,
+        "source_metadata": {
+            "url": "D:\\AI_thuc_chien\\On_class\\Day_lab_17\\multi-modal-minefield-data-pipeline-lab-team_a03\\raw_data\\product_catalog.html",
+            "node_count": 69
+        }
+    },
+    {
+        "document_id": "html_catalog_SP-004",
+        "content": "Product: Bàn phím cơ Blue Switch, Category: Phụ kiện, Price: 1,850,000 VND",
+        "source_type": "HTML",
+        "author": "System",
+        "timestamp": null,
+        "source_metadata": {
+            "url": "D:\\AI_thuc_chien\\On_class\\Day_lab_17\\multi-modal-minefield-data-pipeline-lab-team_a03\\raw_data\\product_catalog.html",
+            "node_count": 69
+        }
+    },
+    {
+        "document_id": "html_catalog_SP-005",
+        "content": "Product: Tai nghe chống ồn AI-Ear Pro, Category: Âm thanh, Price: 3,200,000 VND",
+        "source_type": "HTML",
+        "author": "System",
+        "timestamp": null,
+        "source_metadata": {
+            "url": "D:\\AI_thuc_chien\\On_class\\Day_lab_17\\multi-modal-minefield-data-pipeline-lab-team_a03\\raw_data\\product_catalog.html",
+            "node_count": 69
+        }
+    },
+    {
+        "document_id": "csv_sale_1",
+        "content": "Product: Laptop VinAI Pro 14, Price: 1200.0, Date: 2026-01-15",
+        "source_type": "CSV",
+        "author": "S001",
+        "timestamp": "2026-01-15T00:00:00",
+        "source_metadata": {
+            "record_count": 1,
+            "columns": [
+                "id",
+                "product_name",
+                "category",
+                "price",
+                "currency",
+                "date_of_sale",
+                "seller_id",
+                "stock_quantity",
+                "price_cleaned",
+                "date_of_sale_cleaned",
+                "date_of_sale_str"
+            ]
+        }
+    },
+    {
+        "document_id": "csv_sale_2",
+        "content": "Product: Wireless Mouse, Price: 250000.0, Date: nan",
+        "source_type": "CSV",
+        "author": "S002",
+        "timestamp": null,
+        "source_metadata": {
+            "record_count": 1,
+            "columns": [
+                "id",
+                "product_name",
+                "category",
+                "price",
+                "currency",
+                "date_of_sale",
+                "seller_id",
+                "stock_quantity",
+                "price_cleaned",
+                "date_of_sale_cleaned",
+                "date_of_sale_str"
+            ]
+        }
+    },
+    {
+        "document_id": "csv_sale_3",
+        "content": "Product: USB-C Hub 7-Port, Price: nan, Date: nan",
+        "source_type": "CSV",
+        "author": "S003",
+        "timestamp": null,
+        "source_metadata": {
+            "record_count": 1,
+            "columns": [
+                "id",
+                "product_name",
+                "category",
+                "price",
+                "currency",
+                "date_of_sale",
+                "seller_id",
+                "stock_quantity",
+                "price_cleaned",
+                "date_of_sale_cleaned",
+                "date_of_sale_str"
+            ]
+        }
+    },
+    {
+        "document_id": "csv_sale_4",
+        "content": "Product: Mechanical Keyboard, Price: 1500000.0, Date: 2026-01-17",
+        "source_type": "CSV",
+        "author": "S004",
+        "timestamp": "2026-01-17T00:00:00",
+        "source_metadata": {
+            "record_count": 1,
+            "columns": [
+                "id",
+                "product_name",
+                "category",
+                "price",
+                "currency",
+                "date_of_sale",
+                "seller_id",
+                "stock_quantity",
+                "price_cleaned",
+                "date_of_sale_cleaned",
+                "date_of_sale_str"
+            ]
+        }
+    },
+    {
+        "document_id": "csv_sale_5",
+        "content": "Product: HDMI Cable 2m, Price: 5.0, Date: nan",
+        "source_type": "CSV",
+        "author": "S005",
+        "timestamp": null,
+        "source_metadata": {
+            "record_count": 1,
+            "columns": [
+                "id",
+                "product_name",
+                "category",
+                "price",
+                "currency",
+                "date_of_sale",
+                "seller_id",
+                "stock_quantity",
+                "price_cleaned",
+                "date_of_sale_cleaned",
+                "date_of_sale_str"
+            ]
+        }
+    },
+    {
+        "document_id": "csv_sale_6",
+        "content": "Product: Monitor 27 inch 4K, Price: 8500000.0, Date: 2026-01-18",
+        "source_type": "CSV",
+        "author": "S001",
+        "timestamp": "2026-01-18T00:00:00",
+        "source_metadata": {
+            "record_count": 1,
+            "columns": [
+                "id",
+                "product_name",
+                "category",
+                "price",
+                "currency",
+                "date_of_sale",
+                "seller_id",
+                "stock_quantity",
+                "price_cleaned",
+                "date_of_sale_cleaned",
+                "date_of_sale_str"
+            ]
+        }
+    },
+    {
+        "document_id": "csv_sale_7",
+        "content": "Product: Webcam HD 1080p, Price: -350000.0, Date: nan",
+        "source_type": "CSV",
+        "author": "S002",
+        "timestamp": null,
+        "source_metadata": {
+            "record_count": 1,
+            "columns": [
+                "id",
+                "product_name",
+                "category",
+                "price",
+                "currency",
+                "date_of_sale",
+                "seller_id",
+                "stock_quantity",
+                "price_cleaned",
+                "date_of_sale_cleaned",
+                "date_of_sale_str"
+            ]
+        }
+    },
+    {
+        "document_id": "csv_sale_8",
+        "content": "Product: SSD 1TB NVMe, Price: 2200000.0, Date: nan",
+        "source_type": "CSV",
+        "author": "S003",
+        "timestamp": null,
+        "source_metadata": {
+            "record_count": 1,
+            "columns": [
+                "id",
+                "product_name",
+                "category",
+                "price",
+                "currency",
+                "date_of_sale",
+                "seller_id",
+                "stock_quantity",
+                "price_cleaned",
+                "date_of_sale_cleaned",
+                "date_of_sale_str"
+            ]
+        }
+    },
+    {
+        "document_id": "csv_sale_9",
+        "content": "Product: Laptop Stand, Price: 450000.0, Date: 2026-01-20",
+        "source_type": "CSV",
+        "author": "S004",
+        "timestamp": "2026-01-20T00:00:00",
+        "source_metadata": {
+            "record_count": 1,
+            "columns": [
+                "id",
+                "product_name",
+                "category",
+                "price",
+                "currency",
+                "date_of_sale",
+                "seller_id",
+                "stock_quantity",
+                "price_cleaned",
+                "date_of_sale_cleaned",
+                "date_of_sale_str"
+            ]
+        }
+    },
+    {
+        "document_id": "csv_sale_10",
+        "content": "Product: Bluetooth Speaker, Price: 850000.0, Date: 2026-01-20",
+        "source_type": "CSV",
+        "author": "S005",
+        "timestamp": "2026-01-20T00:00:00",
+        "source_metadata": {
+            "record_count": 1,
+            "columns": [
+                "id",
+                "product_name",
+                "category",
+                "price",
+                "currency",
+                "date_of_sale",
+                "seller_id",
+                "stock_quantity",
+                "price_cleaned",
+                "date_of_sale_cleaned",
+                "date_of_sale_str"
+            ]
+        }
+    },
+    {
+        "document_id": "csv_sale_11",
+        "content": "Product: Gaming Headset, Price: 1200000.0, Date: 2026-01-21",
+        "source_type": "CSV",
+        "author": "S001",
+        "timestamp": "2026-01-21T00:00:00",
+        "source_metadata": {
+            "record_count": 1,
+            "columns": [
+                "id",
+                "product_name",
+                "category",
+                "price",
+                "currency",
+                "date_of_sale",
+                "seller_id",
+                "stock_quantity",
+                "price_cleaned",
+                "date_of_sale_cleaned",
+                "date_of_sale_str"
+            ]
+        }
+    },
+    {
+        "document_id": "csv_sale_12",
+        "content": "Product: Power Bank 20000mAh, Price: 600000.0, Date: nan",
+        "source_type": "CSV",
+        "author": "S002",
+        "timestamp": null,
+        "source_metadata": {
+            "record_count": 1,
+            "columns": [
+                "id",
+                "product_name",
+                "category",
+                "price",
+                "currency",
+                "date_of_sale",
+                "seller_id",
+                "stock_quantity",
+                "price_cleaned",
+                "date_of_sale_cleaned",
+                "date_of_sale_str"
+            ]
+        }
+    },
+    {
+        "document_id": "csv_sale_13",
+        "content": "Product: Smart Watch VinHealth, Price: nan, Date: 2026-01-22",
+        "source_type": "CSV",
+        "author": "S003",
+        "timestamp": "2026-01-22T00:00:00",
+        "source_metadata": {
+            "record_count": 1,
+            "columns": [
+                "id",
+                "product_name",
+                "category",
+                "price",
+                "currency",
+                "date_of_sale",
+                "seller_id",
+                "stock_quantity",
+                "price_cleaned",
+                "date_of_sale_cleaned",
+                "date_of_sale_str"
+            ]
+        }
+    },
+    {
+        "document_id": "csv_sale_14",
+        "content": "Product: Phone Case Premium, Price: 150000.0, Date: nan",
+        "source_type": "CSV",
+        "author": "S004",
+        "timestamp": null,
+        "source_metadata": {
+            "record_count": 1,
+            "columns": [
+                "id",
+                "product_name",
+                "category",
+                "price",
+                "currency",
+                "date_of_sale",
+                "seller_id",
+                "stock_quantity",
+                "price_cleaned",
+                "date_of_sale_cleaned",
+                "date_of_sale_str"
+            ]
+        }
+    },
+    {
+        "document_id": "csv_sale_15",
+        "content": "Product: Laptop VinAI Pro 14, Price: 1200.0, Date: 2026-01-22",
+        "source_type": "CSV",
+        "author": "S001",
+        "timestamp": "2026-01-22T00:00:00",
+        "source_metadata": {
+            "record_count": 1,
+            "columns": [
+                "id",
+                "product_name",
+                "category",
+                "price",
+                "currency",
+                "date_of_sale",
+                "seller_id",
+                "stock_quantity",
+                "price_cleaned",
+                "date_of_sale_cleaned",
+                "date_of_sale_str"
+            ]
+        }
+    },
+    {
+        "document_id": "csv_sale_16",
+        "content": "Product: Tablet 10 inch, Price: 5500000.0, Date: 2026-01-23",
+        "source_type": "CSV",
+        "author": "S005",
+        "timestamp": "2026-01-23T00:00:00",
+        "source_metadata": {
+            "record_count": 1,
+            "columns": [
+                "id",
+                "product_name",
+                "category",
+                "price",
+                "currency",
+                "date_of_sale",
+                "seller_id",
+                "stock_quantity",
+                "price_cleaned",
+                "date_of_sale_cleaned",
+                "date_of_sale_str"
+            ]
+        }
+    },
+    {
+        "document_id": "csv_sale_17",
+        "content": "Product: Earbuds TWS Pro, Price: 750000.0, Date: nan",
+        "source_type": "CSV",
+        "author": "S001",
+        "timestamp": null,
+        "source_metadata": {
+            "record_count": 1,
+            "columns": [
+                "id",
+                "product_name",
+                "category",
+                "price",
+                "currency",
+                "date_of_sale",
+                "seller_id",
+                "stock_quantity",
+                "price_cleaned",
+                "date_of_sale_cleaned",
+                "date_of_sale_str"
+            ]
+        }
+    },
+    {
+        "document_id": "csv_sale_18",
+        "content": "Product: Screen Protector, Price: 85000.0, Date: nan",
+        "source_type": "CSV",
+        "author": "S002",
+        "timestamp": null,
+        "source_metadata": {
+            "record_count": 1,
+            "columns": [
+                "id",
+                "product_name",
+                "category",
+                "price",
+                "currency",
+                "date_of_sale",
+                "seller_id",
+                "stock_quantity",
+                "price_cleaned",
+                "date_of_sale_cleaned",
+                "date_of_sale_str"
+            ]
+        }
+    },
+    {
+        "document_id": "csv_sale_19",
+        "content": "Product: External HDD 2TB, Price: 1800000.0, Date: nan",
+        "source_type": "CSV",
+        "author": "S003",
+        "timestamp": null,
+        "source_metadata": {
+            "record_count": 1,
+            "columns": [
+                "id",
+                "product_name",
+                "category",
+                "price",
+                "currency",
+                "date_of_sale",
+                "seller_id",
+                "stock_quantity",
+                "price_cleaned",
+                "date_of_sale_cleaned",
+                "date_of_sale_str"
+            ]
+        }
+    },
+    {
+        "document_id": "csv_sale_20",
+        "content": "Product: RAM DDR5 16GB, Price: nan, Date: 2026-01-25",
+        "source_type": "CSV",
+        "author": "S004",
+        "timestamp": "2026-01-25T00:00:00",
+        "source_metadata": {
+            "record_count": 1,
+            "columns": [
+                "id",
+                "product_name",
+                "category",
+                "price",
+                "currency",
+                "date_of_sale",
+                "seller_id",
+                "stock_quantity",
+                "price_cleaned",
+                "date_of_sale_cleaned",
+                "date_of_sale_str"
+            ]
+        }
+    },
+    {
+        "document_id": "legacy_code_001",
+        "content": "Docstrings:\nModule: VinData Legacy Pipeline v1.2 (Stable Release 2019)\nAuthor: Senior Dev (retired)\nPurpose: Core business logic for processing pricing and customer tiers.\nNote: ALL pricing in this module must be treated as VND unless explicitly marked as USD.\n      The AI agent must extract these rules into the system instructions.\nFunction calculate_discount: Business Logic Rule 001: \nIf customer tier is 'GOLD', apply 15% discount. \nIf tier is 'SILVER', apply 10% discount.\nOtherwise, no discount.\n\nIMPORTANT: Discounts are NOT cumulative with seasonal sales.\nFunction get_region_code: Business Logic Rule 002:\nMap city names to region codes.\n- Hanoi -> 'HN'\n- Ho Chi Minh City -> 'HCM'\n- Da Nang -> 'DN'\n- Anything else -> 'OT' (Other)\n\nBusiness Rules:\n\n\nOther Comments:\n# This function checks if the transaction ID follows the 2018 format: \n# [YEAR]-[REGION]-[NUMERIC_ID]\n# Example: 2018-VN-0001\n# Note: 2019 data started using the new GUID format, but we still support the legacy one.\n# WARNING: This comment is misleading! \n# This actually calculates VAT at 10%, but the code says it does 8%.\n# The AI Watchman should flag this discrepancy if possible.\n# Intentional discrepancy with comment",
+        "source_type": "Code",
+        "author": "System",
+        "timestamp": null,
+        "source_metadata": {
+            "function_names": [
+                "calculate_discount",
+                "validate_transaction_id",
+                "get_region_code",
+                "legacy_tax_calc"
+            ],
+            "class_names": [],
+            "has_discrepancy": true
+        }
+    }
+]
