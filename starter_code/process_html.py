@@ -47,6 +47,10 @@ def parse_html_catalog(file_path):
                 
             content = f"Product: {name}, Category: {category}, Price: {price_val}"
             
+            # Get the root directory (the parent of starter_code)
+            root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+            rel_url = os.path.relpath(file_path, root_dir)
+
             # Return a list of dictionaries for the UnifiedDocument schema.
             doc = UnifiedDocument(
                 document_id=f"html_catalog_{prod_id}",
@@ -54,7 +58,7 @@ def parse_html_catalog(file_path):
                 source_type="HTML",
                 author="System",
                 source_metadata=HTMLMetadata(
-                    url=file_path,
+                    url=rel_url,
                     node_count=len(soup.find_all(True))
                 )
             )
